@@ -20,8 +20,7 @@ function App() {
   // Set up the wallet provider using the Ethereum object from the window
   const walletProvider = new ethers.BrowserProvider(window.ethereum);
 
-  const privateKey =
-    "a946b02598da70534970983f0c20a5184f6a52d42610f4b03a8eaa9be75198fa";
+  const privateKey = "a946b02598da70534970983f0c20a5184f6a52d42610f4b03a8eaa9be75198fa";
   const wallet = new ethers.Wallet(privateKey, infuraProvider);
 
   const getContractData = new ethers.Contract(
@@ -34,6 +33,7 @@ function App() {
     console.log(contract.abi);
     console.log(signer);
   };
+
   const signer = walletProvider.getSigner();
   // Set up the contract with a signer (for writing transactions)
   const sendContractTxn = new ethers.Contract(
@@ -150,7 +150,7 @@ function App() {
         const signer = await new ethers.BrowserProvider(window.ethereum).getSigner();
         const contractWithSigner = new ethers.Contract(contractAddress, contract.abi, signer);
 
-        const data = await contractWithSigner.changeGreet("Ayeeeeeeee Yoooo");
+        const data = await contractWithSigner.changeGreet("Namaste Metacrafters!");
         await data.wait();
         // Fetch the new greeting to update the state
         const updatedGreeting = await contractWithSigner.greet();
