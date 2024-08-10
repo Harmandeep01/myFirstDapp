@@ -14,7 +14,6 @@ This is a React-based decentralized application (DApp) that interacts with an Et
    ```bash
    git clone https://github.com/Harmandeep01/myFirstDapp/
    ```
-
 2. **Install dependencies:** 
 ```
     cd mydapps
@@ -26,7 +25,7 @@ In another terminal, navigate to the directory where your smart contract is loca
 npx hardhat run scripts/deploy.js
 ```
 
-4. **Run the Application:**
+4. **Run the Application :** To run the App you need to open src and type 
 In the terminal where you initialized the project, run:
 ```
 npm start
